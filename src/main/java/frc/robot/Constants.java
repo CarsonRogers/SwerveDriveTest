@@ -19,7 +19,7 @@ import edu.wpi.first.math.util.Units;
 public final class Constants {
   public static class OperatorConstants {
     public static final int kDriverControllerPort = 0;
-    public static final double kDeadband = 0.01;
+    public static final double kDeadband = 0.05;
   }
 
   public static class ModuleConstants {
@@ -58,45 +58,43 @@ public final class Constants {
 
     public static final double kTeleDriveMaxAccelerationUnitesPerSecond = 2;
     public static final double kTeleDriveMaxSpeedMetersPerSecond = 3;
-    public static final double kTeleDriveMaxAngularAccelerationUnitsPerSecond = 2;
-    public static final double kTeleDriveMaxAngularSpeedRadiansPerSecond = 1;
+    public static final double kTeleDriveMaxAngularAccelerationUnitsPerSecond = 3;
+    public static final double kTeleDriveMaxAngularSpeedRadiansPerSecond = kPhysicalMaxSpeedMetersPerSecond / 4;
 
-    //FrontLeft
     public static final int kFrontLeftDriveCANID = 1;
     public static final int kFrontLeftTurningCANID = 2;
-    public static final boolean kFrontLeftDriveEncoderReversed = false; 
-    public static final boolean kFrontLeftTurningEncoderReversed = false; 
-    public static final int kFrontLeftAbsoluteEncoderPort = 1;
-    public static final double kFrontLeftAbsoluteEncoderOffsetRad = 0.0;
-    public static final boolean kFrontLeftAbsoluteEncoderReversed = false;
-
-    //FrontRight
     public static final int kFrontRightDriveCANID = 3;
     public static final int kFrontRightTurningCANID = 4;
-    public static final boolean kFrontRightDriveEncoderReversed = false; 
-    public static final boolean kFrontRightTurningEncoderReversed = false; 
-    public static final int kFrontRightAbsoluteEncoderPort = 2;
-    public static final double kFrontRightAbsoluteEncoderOffsetRad = 0.0;
-    public static final boolean kFrontRightAbsoluteEncoderReversed = false;
-
-
-    //BackLeft
     public static final int kBackLeftDriveCANID = 5;
     public static final int kBackLeftTurningCANID = 6;
-    public static final boolean kBackLeftDriveEncoderReversed = false; 
-    public static final boolean kBackLeftTurningEncoderReversed = false; 
-    public static final int kBackLeftAbsoluteEncoderPort = 3;
-    public static final double kBackLeftAbsoluteEncoderOffsetRad = 0.0;
-    public static final boolean kBackLeftAbsoluteEncoderReversed = false;
-
-
-    //BackRight
     public static final int kBackRightDriveCANID = 7;
     public static final int kBackRightTurningCANID = 8;
+
+    public static final boolean kFrontLeftDriveEncoderReversed = false; 
+    public static final boolean kFrontLeftTurningEncoderReversed = false; 
+    public static final boolean kFrontRightDriveEncoderReversed = false; 
+    public static final boolean kFrontRightTurningEncoderReversed = false; 
+    public static final boolean kBackLeftDriveEncoderReversed = false; 
+    public static final boolean kBackLeftTurningEncoderReversed = false; 
     public static final boolean kBackRightDriveEncoderReversed = false; 
     public static final boolean kBackRightTurningEncoderReversed = false; 
+
+    public static final int kFrontLeftAbsoluteEncoderPort = 1;
+    public static final int kFrontRightAbsoluteEncoderPort = 2;
+    public static final int kBackLeftAbsoluteEncoderPort = 3;
     public static final int kBackRightAbsoluteEncoderPort = 4;
+
+    //offset values
+    public static final double kFrontLeftAbsoluteEncoderOffsetRad = 0.0;
+    public static final double kFrontRightAbsoluteEncoderOffsetRad = 0.0;
+    public static final double kBackLeftAbsoluteEncoderOffsetRad = 0.0;
     public static final double kBackRightAbsoluteEncoderOffsetRad = 0.0;
+
+    public static final int idk = 1;
+
+    public static final boolean kFrontLeftAbsoluteEncoderReversed = false;
+    public static final boolean kFrontRightAbsoluteEncoderReversed = false;
+    public static final boolean kBackLeftAbsoluteEncoderReversed = false;
     public static final boolean kBackRightAbsoluteEncoderReversed = false;
 
   }
